@@ -8,11 +8,11 @@
     .pokemon {
         position: relative;
         display: flex;
-        width: 40%;
+        width: 42%;
         background-color: var(--branco);
         border-radius: rem-calc(10);
         padding: rem-calc(20);
-        height: rem-calc(145);
+        height: rem-calc(120);
 
         &__status {
 
