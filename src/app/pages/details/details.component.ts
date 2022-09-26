@@ -33,16 +33,17 @@ export class DetailsComponent implements OnInit, DoCheck {
     const pokemon = this.pokeApiService.apiGetPokemons(`${this.urlPokemon}/${id}`);
     const name = this.pokeApiService.apiGetPokemons(`${this.urlName}/${id}`);
 
-    return forkJoin([pokemon, name]).subscribe(
-      res => {
+    return forkJoin([pokemon, name]).subscribe({
+      next: res => {
         this.pokemon = res;
         this.isLoading = true;
       },
-      error => {
+      error: err => {
         this.apiError = true;
       }
-    );
+    })
   }
+
 
   ngDoCheck(): void {
     console.log(this.pokemon)
