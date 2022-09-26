@@ -5,8 +5,11 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    flex-wrap: wrap;;
 
     .pokemon {
+        color: var(--primary-color);
+        text-decoration: none;
         position: relative;
         display: flex;
         width: 42%;
@@ -14,6 +17,7 @@
         border-radius: rem-calc(10);
         padding: rem-calc(20);
         height: rem-calc(120);
+        margin-bottom: rem-calc(15);
 
         &__status {
 
@@ -21,6 +25,7 @@
                 font-size: rem-calc(22);
                 font-weight: bold;
                 margin-bottom: rem-calc(10);
+                text-transform: capitalize;
             }
 
             ul {
